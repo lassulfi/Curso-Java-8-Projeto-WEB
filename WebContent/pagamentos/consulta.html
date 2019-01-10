@@ -23,13 +23,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 text-center">
-					<h3 class="tt_menu">&gt;&gt; PAGAMENTOS - CONSULTAR UM NOVO
-						PAGAMENTO &lt;&lt;</h3>
+					<h3 class="tt_menu">&gt;&gt; PAGAMENTOS - CONSULTAR UM PAGAMENTO &lt;&lt;</h3>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<form class="form-horizontal" role="form">
+					<form class="form-horizontal" role="form" action="http://localhost:8085/ProjetoWEB/ServletController" method="post">
 						<div class="form-group">
 							<div class="col-sm-2">
 								<label for="inputCPF" class="control-label">Informar o
@@ -51,6 +50,8 @@
 									placeholder="CURSO" required>
 							</div>
 						</div>
+						<input type="hidden" name="idformulario" value="3"> 
+						<input type="hidden" name="tipoformulario" value="2">
 								<button type="submit" class="btn btn-danger">Consultar</button>
 					</form>
 				</div>

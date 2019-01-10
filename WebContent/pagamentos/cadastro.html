@@ -29,7 +29,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<form class="form-horizontal" role="form">
+					<form class="form-horizontal" role="form" action="http://localhost:8085/ProjetoWEB/ServletController" method="post">
 						<div class="form-group">
 							<div class="col-sm-3">
 								<label for="inputCPF" class="control-label">Informar o
@@ -61,6 +61,8 @@
 									id="inputDATA" title="Preencha o campo Nome" required>
 							</div>
 						</div>
+						<input type="hidden" name="idformulario" value="3"> 
+						<input type="hidden" name="tipoformulario" value="3">
 						<button type="submit" class="btn btn-danger">Cadastrar</button>
 					</form>
 				</div>

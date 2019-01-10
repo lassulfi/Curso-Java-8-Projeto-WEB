@@ -29,7 +29,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<form class="form-horizontal" role="form">
+					<form class="form-horizontal" role="form" action="http://localhost:8085/ProjetoWEB/ServletController" method="post">
 						<div class="form-group">
 							<div class="col-sm-2">
 								<label for="inputEmail3" class="control-label">Informar
@@ -41,6 +41,8 @@
 									title="Digite o número do curso" required>
 							</div>
 						</div>
+						<input type="hidden" name="idformulario" value="2"> 
+						<input type="hidden" name="tipoformulario" value="2">
 						<button type="submit" class="btn btn-danger">Consultar</button>
 					</form>
 				</div>
