@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<jsp:include page="../util/topo.jsp"/>
 <html>
 <head>
 <meta charset="utf-8">
@@ -8,6 +10,7 @@
 	type="text/css">
 <link href="../lib/css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="../lib/css/padrao.css" rel="stylesheet" type="text/css">
+<title>Sucesso - Sistema de Gerenciamento de Cursos</title>
 </head>
 <body>
 	<div class="section section-danger text-justify">
@@ -19,32 +22,26 @@
 			</div>
 		</div>
 	</div>
+	<div class="section section-danger text-justify">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-md-12 text-center">
+					<h1 class="text-center">${mensagem}</h1>
+					<c:if test="${curso != null}">
+						<h3 class="text-center">CÓDIGO DO CURSO: ${curso.cdcurso}</h3>
+						<h3 class="text-center">NOME: ${curso.nome}</h3>
+						<h3 class="text-center">VALOR: ${curso.valor}</h3>
+						<h3 class="text-center">URL: ${curso.url}</h3>
+					</c:if>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="section">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 text-center">
-					<h3 class="tt_menu">&gt;&gt; CLIENTES - CONSULTAR UM CLIENTE
-						&lt;&lt;</h3>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<form class="form-horizontal" role="form" action="http://localhost:8085/ProjetoWEB/ServletController" method="post">
-						<div class="form-group">
-							<div class="col-sm-3">
-								<label for="inputCPF" class="control-label">Informar o
-									CPF a ser CONSULTADO:</label>
-							</div>
-							<div class="col-sm-9">
-								<input type="text" name="cpf" class="form-control" id="inputCPF"
-									placeholder="CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
-									title="Digite um CPF no formato: xxx.xxx.xxx-xx" required>
-							</div>
-						</div>
-						<input type="hidden" name="idformulario" value="1"> 
-						<input type="hidden" name="tipoformulario" value="2">
-						<button type="submit" class="btn btn-danger">Consultar</button>
-					</form>
+					<a class="btn btn-default" href="index.jsp">Retornar ao menu de clientes</a>
 				</div>
 			</div>
 		</div>
@@ -59,15 +56,6 @@
 			</div>
 		</div>
 	</footer>
-	<div class="section">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center corrigir">
-					<a class="btn btn-default" href="javascript:window.history.go(-1)">Voltar</a>
-				</div>
-			</div>
-		</div>
-	</div>
 
 
 </body>

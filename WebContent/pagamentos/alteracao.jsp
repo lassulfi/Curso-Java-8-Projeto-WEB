@@ -1,3 +1,4 @@
+<jsp:include page="../util/topo.jsp"/>
 <html>
 <head>
 <meta charset="utf-8">
@@ -23,8 +24,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 text-center">
-					<h3 class="tt_menu">&gt;&gt; PAGAMENTOS - CADASTRAR UM NOVO
-						PAGAMENTO &lt;&lt;</h3>
+					<h3 class="tt_menu">&gt;&gt; PAGAMENTOS - ALTERAR UM PAGAMENTO
+						&lt;&lt;</h3>
 				</div>
 			</div>
 			<div class="row">
@@ -54,16 +55,26 @@
 						<div class="form-group">
 							<div class="col-sm-3">
 								<label for="inputDATA" class="control-label">Informar a
-									DATA DE INSCRI√á√ÉO:</label>
+									DATA DE INSCRI«á√ÉO:</label>
 							</div>
 							<div class="col-sm-9">
 								<input type="date" name="datainscricao" class="form-control"
-									id="inputDATA" title="Preencha o campo Nome" required>
+									id="inputDATA" title="Preencha o campo DATA DE INSCRI«√O" required>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-3">
+								<label for="inputDATA" class="control-label">Informar a
+									NOVA DATA DE INSCRI«á√ÉO:</label>
+							</div>
+							<div class="col-sm-9">
+								<input type="date" name="novadata" class="form-control"
+									id="inputDATA" title="Preencha o campo NOVA DATA DE INSCRI«√O" required>
 							</div>
 						</div>
 						<input type="hidden" name="idformulario" value="3"> 
-						<input type="hidden" name="tipoformulario" value="3">
-						<button type="submit" class="btn btn-danger">Cadastrar</button>
+						<input type="hidden" name="tipoformulario" value="4">
+						<button type="submit" class="btn btn-danger">Alterar</button>
 					</form>
 				</div>
 			</div>

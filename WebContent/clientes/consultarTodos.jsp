@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<jsp:include page="../util/topo.jsp"/>
 <html>
 <head>
 <meta charset="utf-8">
@@ -8,6 +10,7 @@
 	type="text/css">
 <link href="../lib/css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="../lib/css/padrao.css" rel="stylesheet" type="text/css">
+<title>Consulta todos os clientes</title>
 </head>
 <body>
 	<div class="section section-danger text-justify">
@@ -19,32 +22,45 @@
 			</div>
 		</div>
 	</div>
+	
 	<div class="section">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 text-center">
-					<h3 class="tt_menu">&gt;&gt; CURSOS - EXCLUIR UM CURSO
-						&lt;&lt;</h3>
+					<h3 class="tt_menu">&gt;&gt; CLIENTES - CONSULTAR TODOS &lt;&lt;</h3>
 				</div>
 			</div>
+		</div>
+	</div>
+	n
+	<div class="section section-danger text-justify">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-md-12 text-center">
+					<h1 class="text-center">${mensagem}</h1>
+					<table align="center" border="1">
+						<tr>
+							<th>CPF</th>
+							<th>NOME</th>
+							<th>E-MAIL</th>
+						</tr>
+						<c:forEach var="row" items="${clientes}">
+							<tr>
+								<td><c:out value="${row.cpf}"/></td>
+								<td><c:out value="${row.nome}"/></td>
+								<td><c:out value="${row.email}"/></td>
+							</tr>
+						</c:forEach>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section">
+		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
-					<form class="form-horizontal" role="form" action="http://localhost:8085/ProjetoWEB/ServletController" method="post">
-						<div class="form-group">
-							<div class="col-sm-3">
-								<label for="inputCPF" class="control-label">Informar o
-									CURSO a ser EXCLUÍDO:</label>
-							</div>
-							<div class="col-sm-9">
-								<input type="number" name="cdcurso" class="form-control"
-									id="inputCPF" placeholder="CURSO"
-									title="Digite o código do curso" required>
-							</div>
-						</div>
-						<input type="hidden" name="idformulario" value="2"> 
-						<input type="hidden" name="tipoformulario" value="5">
-						<button type="submit" class="btn btn-danger">Excluir</button>
-					</form>
+				<div class="col-md-12 text-center">
+					<a class="btn btn-default" href="index.jsp">Retornar ao menu de clientes</a>
 				</div>
 			</div>
 		</div>
@@ -53,21 +69,12 @@
 		<div class="navbar navbar-fixed-bottom bgred">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-12 text-center" style="top: 13px; color: #fff;">©
+					<div class="col-sm-12 text-center" style="top: 13px; color: #fff;">�
 						ABCTreinamentos - Curso de Java 8 para Web</div>
 				</div>
 			</div>
 		</div>
 	</footer>
-	<div class="section">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center corrigir">
-					<a class="btn btn-default" href="javascript:window.history.go(-1)">Voltar</a>
-				</div>
-			</div>
-		</div>
-	</div>
 
 
 </body>

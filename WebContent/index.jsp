@@ -1,3 +1,4 @@
+<jsp:include page="util/topo.jsp"/>
 <html>
 <head>
 <meta charset="utf-8">
@@ -25,10 +26,19 @@
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<div class="col-md-12  btn-group btn-group-lg btn-group-vertical">
-						<a href="clientes/index.html" class="btn btn-default">CLIENTES</a>
-						<a href="cursos/index.html" class="btn btn-default">CURSOS</a> <a
-							href="pagamentos/index.html" class="btn btn-default">PAGAMENTOS</a>
+						<a href="clientes/index.jsp" class="btn btn-default">CLIENTES</a>
+						<a href="cursos/index.jsp" class="btn btn-default">CURSOS</a> <a
+							href="pagamentos/index.jsp" class="btn btn-default">PAGAMENTOS</a>
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<a class="btn btn-default" href="http://localhost:8085/ProjetoWEB/logout.jsp">Sair</a>
 				</div>
 			</div>
 		</div>

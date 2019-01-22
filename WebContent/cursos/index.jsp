@@ -1,3 +1,4 @@
+<jsp:include page="../util/topo.jsp" />
 <html>
 <head>
 <meta charset="utf-8">
@@ -23,28 +24,27 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 text-center">
-					<h3 class="tt_menu">&gt;&gt; CLIENTES - EXCLUIR UM CLIENTE
-						&lt;&lt;</h3>
+					<h3 class="tt_menu">&gt;&gt; CURSOS &lt;&lt;</h3>
+					<div class="col-md-12  btn-group btn-group-lg btn-group-vertical">
+						<a href="http://localhost:8085/ProjetoWEB/ServletController?idformulario=2&tipoformulario=1" class="btn btn-default">Consultar Todos os Cursos</a>
+						<a href="consulta.jsp" class="btn btn-default">Consultar um
+							Curso EspecÌfico</a> 
+						<a href="cadastro.jsp" class="btn btn-default">Cadastrar
+							um Novo Curso</a>
+						<a href="alteracao.jsp" class="btn btn-default">Alterar
+							um Curso</a>
+						<a href="exclusao.jsp" class="btn btn-default">Excluir
+							um Curso</a>
+					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+	<div class="section">
+		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
-					<form class="form-horizontal" role="form" action="http://localhost:8085/ProjetoWEB/ServletController" method="post">
-						<div class="form-group">
-							<div class="col-sm-3">
-								<label for="inputCPF" class="control-label">Informar o
-									CPF a ser EXCLU√çDO:</label>
-							</div>
-							<div class="col-sm-9">
-								<input type="text" name="cpf" class="form-control" id="inputCPF"
-									placeholder="CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
-									title="Digite um CPF no formato: xxx.xxx.xxx-xx" required>
-							</div>
-						</div>
-						<input type="hidden" name="idformulario" value="1"> 
-						<input type="hidden" name="tipoformulario" value="5">
-						<button type="submit" class="btn btn-danger">Excluir</button>
-					</form>
+				<div class="col-md-12 text-center corrigir">
+					<a class="btn btn-default" href="../index.jsp">Voltar</a>
 				</div>
 			</div>
 		</div>
@@ -59,15 +59,6 @@
 			</div>
 		</div>
 	</footer>
-	<div class="section">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center corrigir">
-					<a class="btn btn-default" href="javascript:window.history.go(-1)">Voltar</a>
-				</div>
-			</div>
-		</div>
-	</div>
 
 
 </body>
