@@ -1,4 +1,4 @@
-package com.abctreinamentos;
+package model;
 // Generated 02/01/2019 15:52:06 by Hibernate Tools 4.3.5.Final
 
 import java.io.Serializable;

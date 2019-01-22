@@ -17,13 +17,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.abctreinamentos.Cliente;
-import com.abctreinamentos.Curso;
-import com.abctreinamentos.Pagamento;
-import com.abctreinamentos.PagamentoId;
-
 import enums.FormIDEnum;
 import enums.FormTypeEnum;
+import model.Cliente;
+import model.Curso;
+import model.Pagamento;
+import model.PagamentoId;
 
 /**
  * Servlet implementation class ServletController
